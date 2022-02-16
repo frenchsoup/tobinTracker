@@ -2,8 +2,12 @@ body {
   background-color: blanchedalmond;
 }
 
+.trackerLabel {
+  color: #0275d8;
+  font-weight: bold;
+}
+
 input {
-  padding: 0px;
   text-align: center;
 }
 
