@@ -13,7 +13,6 @@
     <!-- Personal CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <script src="scripts.js"></script>
     <title>Tobin Tracker</title>
   </head>
 
@@ -25,74 +24,38 @@
     </nav>
     <div class="container">
       <div class="card border-primary m-4 justify-content-center">
-        <h4 class="card-header">Bets</h4>
         <div class="card-body">
           <div class="row justify-content-end text-center">
-            <div class="col-2 me-1">
+            <div class="col-2 me-1 label">
               Win
             </div>
-            <div class="col-2 me-1">
+            <div class="col-2 me-1 label">
               Loss
             </div>
-            <div class="col-2 me-1">
+            <div class="col-2 me-1 label">
               Push
             </div>
-            <div class="col-2 me-1">
+            <div id="percentageLabel" class="col-2 me-1 label">
               Win %
             </div>
           </div>
           <div class="row justify-content-end">
             <div id="tobiNBA" class="col-3 text-center trackerLabel">TobiNBA</div>
-            <input id="test" type="number" min="0" class=" wins col-2 me-1 p-0" value="0" onchange="storeData()">
-            <input type="number" min="0" class="losses col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="pushes col-2 me-1 p-0" value="0">
-            <input disabled class="winPercentage col-2 p-0" value="0">
+            <input id="wins" type="number" min="0" class="wins col-2 me-1 p-0" value="0" onchange="storeWins()">
+            <input id="losses" type="number" min="0" class="losses col-2 me-1 p-0" value="0" onchange="storeLosses()">
+            <input id="pushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0" onchange="storePushes()">
+            <div id="winPercentage" class="winPercentage col-2 p-0" value="0"></div>
           </div>
-          <div class="row justify-content-end mt-2">
-            <div id="tobiNCAA" class="col-3 text-center trackerLabel">TobiNCAA</div>
-            <input type="number" min="0" class=" wins col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="losses col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="pushes col-2 me-1 p-0" value="0">
-            <input disabled class="winPercentage col-2 p-0" value="0">
-          </div>
-          <div class="row justify-content-end mt-2">
-            <div id="salaMMA" class="col-3 text-center trackerLabel">SalaMMA</div>
-            <input type="number" min="0" class=" wins col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="losses col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="pushes col-2 me-1 p-0" value="0">
-            <input disabled class="winPercentage col-2 p-0" value="0">
-          </div>
-          <div class="row justify-content-end mt-2">
-            <div id="salaNBA" class="col-3 text-center trackerLabel">SalaNBA</div>
-            <input type="number" min="0" class=" wins col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="losses col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="pushes col-2 me-1 p-0" value="0">
-            <input disabled class="winPercentage col-2 p-0" value="0">
-          </div>
-          <div class="row justify-content-end mt-2">
-            <div id="salaPTA" class="col-3 text-center trackerLabel">SalaPTA</div>
-            <input type="number" min="0" class=" wins col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="losses col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="pushes col-2 me-1 p-0" value="0">
-            <input disabled class="winPercentage col-2 p-0" value="0">
-          </div>
-          <div class="row justify-content-end mt-2">
-            <div id="lePGA" class="col-3 text-center trackerLabel">LePGA</div>
-            <input type="number" min="0" class=" wins col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="losses col-2 me-1 p-0" value="0">
-            <input type="number" min="0" class="pushes col-2 me-1 p-0" value="0">
-            <input disabled class="winPercentage col-2 p-0" value="0">
-          </div>
-          <button class="btn btn-primary mt-2">Add Tracker</button>
         </div>
       </div>
-    </div>
 
+      <!-- Personal Script -->
+      <script src="scripts.js"></script>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"></script>
+      <!-- Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
   </body>
 

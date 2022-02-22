@@ -7,11 +7,21 @@ body {
   font-weight: bold;
 }
 
-input {
+input,
+.winPercentage {
   text-align: center;
 }
 
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   opacity: 1;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.winPercentage {
+  vertical-align: middle;
+  font-weight: bold;
 }
