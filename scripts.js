@@ -11,8 +11,8 @@ let setPushes = Number(localStorage.getItem('Pushes'));
 document.getElementById('pushes').value = setPushes;
 
 // setting unit on page load
-let setUnit = Number(localStorage.getItem('unitCount'));
-document.getElementById('unitCount').value = setUnit;
+let setUnit = Number(localStorage.getItem('Unit'));
+document.getElementById('amount').value = setUnit;
 
 // setting values on page load
 calcWinPercentage();
@@ -83,6 +83,4 @@ function calcUnitWinLoss() {
 }
 
 //TODO:
-// calculates the win percentage on page load. Find way to calc every time a # changes
-// get $ calcs added in
-// maybe add a Unit input that will calc based on input $ amount
+// Store unit and add green/red based on profit or loss
