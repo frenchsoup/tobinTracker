@@ -81,6 +81,3 @@ function calcUnitWinLoss() {
   }
   document.getElementById('unitCount').innerHTML = '$' + unitWinLoss;
 }
-
-//TODO:
-// Store unit and add green/red based on profit or loss
