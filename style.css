@@ -3,13 +3,13 @@ body {
   font-size: x-small;
 }
 
-.trackerLabel {
+.tobiNBALabel, .unitLabel, .spreadLabel, .OULabel {
   color: #0275d8;
   font-weight: bold;
 }
 
 input,
-.winPercentage, .unitCount {
+.winPercentage, .spreadWinPercentage, .unitSelect {
   text-align: center;
 }
 
@@ -22,7 +22,7 @@ input[type='number']::-webkit-outer-spin-button {
   font-weight: bold;
 }
 
-.winPercentage, .unitCount {
+.winPercentage, .spreadWinPercentage, .unitSelect {
   vertical-align: middle;
   font-weight: bold;
 }

@@ -25,34 +25,75 @@
     <div class="container">
       <div class="card border-primary m-4 justify-content-center">
         <div class="card-body">
-          <div class="row justify-content-end text-center">
-            <div class="col-2 me-1 label">
-              Win
+          <span class="overallTracking">
+            <div class="row justify-content-end text-center">
+              <div class="col-2 me-1 label">
+                Win
+              </div>
+              <div class="col-2 me-1 label">
+                Loss
+              </div>
+              <div class="col-2 me-1 label">
+                Push
+              </div>
+              <div class="col-2 me-1 label">
+                Total
+              </div>
             </div>
-            <div class="col-2 me-1 label">
-              Loss
+            <div class="row mt-1 justify-content-end">
+              <div id="tobiNBA" class="col-3 text-center tobiNBALabel">TobiNBA</div>
+              <!-- Add disabled to these after pushing #s from lower section -->
+              <input disabled id="totalWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0"
+                onchange="storeTotalWins()">
+              <input disabled id="totalLosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
+                onchange="storeTotalLosses()">
+              <input disabled id="totalPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
+                onchange="storeTotalPushes()">
+              <div id="winPercentage" class="winPercentage col-2 p-0" value="0"></div>
             </div>
-            <div class="col-2 me-1 label">
-              Push
+            <div class="row mt-1 justify-content-end">
+              <div class="col-2 text-center unitLabel">
+                Unit ($)
+              </div>
+              <input id="unit" class="wins col-2 me-1 p-0" type="number" onchange="storeUnit()">
+              <div id="unitSelect" class="unitSelect wins col-2 p-0" value="0"></div>
             </div>
-            <div id="percentageLabel" class="col-2 me-1 label">
-              Total
+          </span>
+          <span class="statTracking">
+            <div class="row mt-5 justify-content-end text-center">
+              <div class="col-2 me-1 label">
+                Win
+              </div>
+              <div class="col-2 me-1 label">
+                Loss
+              </div>
+              <div class="col-2 me-1 label">
+                Push
+              </div>
+              <div class="col-2 me-1 label">
+                Win %
+              </div>
             </div>
-          </div>
-          <div class="row mt-1 justify-content-end">
-            <div id="tobiNBA" class="col-3 text-center trackerLabel">TobiNBA</div>
-            <input id="wins" type="number" min="0" class="wins col-2 me-1 p-0" value="0" onchange="storeWins()">
-            <input id="losses" type="number" min="0" class="losses col-2 me-1 p-0" value="0" onchange="storeLosses()">
-            <input id="pushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0" onchange="storePushes()">
-            <div id="winPercentage" class="winPercentage col-2 p-0" value="0"></div>
-          </div>
-          <div class="row mt-1 justify-content-end">
-            <div id="unit" class="col-2 text-center trackerLabel">
-              Unit
+            <div class="row mt-1 justify-content-end">
+              <div id="spread" class="col-3 text-center spreadLabel">Spread</div>
+              <input id="spreadWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0"
+                onchange="storeSpreadWins()">
+              <input id="spreadLosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
+                onchange="storeSpreadLosses()">
+              <input id="spreadPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
+                onchange="storeSpreadPushes()">
+              <div id="spreadWinPercentage" class="spreadWinPercentage col-2 p-0" value="0"></div>
             </div>
-            <input id="amount" class="wins col-2 me-1 p-0" type="number" onchange="storeUnit()">
-            <div id="unitCount" class="unitCount wins col-2 p-0" value="0"></div>
-          </div>
+            <div class="row mt-1 justify-content-end">
+              <div id="OU" class="col-3 text-center OULabel">Over / Under</div>
+              <input id="OUWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0" onchange="storeOUWins()">
+              <input id="OULosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
+                onchange="storeOULosses()">
+              <input id="OUPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
+                onchange="storeOUPushes()">
+              <div id="OUWinPercentage" class="winPercentage col-2 p-0" value="0"></div>
+            </div>
+          </span>
         </div>
       </div>
 
