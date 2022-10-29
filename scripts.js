@@ -70,7 +70,6 @@ function storeTotalLosses() {
 function storeTotalPushes() {
   let getPushes = Number(document.getElementById('totalPushes').value);
   localStorage.setItem('Total Pushes', getPushes);
-  calcUnitWinLoss();
 }
 
 // storing unit in local and calculating
@@ -114,9 +113,6 @@ function storeSpreadPushes() {
   localStorage.setItem('Spread Pushes', getSpreadPushes);
   localStorage.setItem('Total Pushes', getTotalPushes);
   document.getElementById('totalPushes').value = getTotalPushes;
-  calcSpreadWinPercentage();
-  calcTotalWinPercentage();
-  calcUnitWinLoss();
 }
 
 // storing over under wins in local and calculating on input change
@@ -153,24 +149,6 @@ function storeOUPushes() {
   localStorage.setItem('OU Pushes', getOUPushes);
   localStorage.setItem('Total Pushes', getTotalPushes);
   document.getElementById('totalPushes').value = getTotalPushes;
-  calcOUWinPercentage();
-  calcTotalWinPercentage();
-  calcUnitWinLoss();
-}
-
-// calculate total win percentage on change of any of the numbers
-function calcTotalWinPercentage() {
-  let getTotalWins = Number(document.getElementById('totalWins').value);
-  let getTotalLosses = Number(document.getElementById('totalLosses').value);
-  let totalWagers = getTotalWins + getTotalLosses;
-  let winPercentage = ((getTotalWins / totalWagers) * 100).toFixed(2);
-
-  if (winPercentage >= 50) {
-    document.getElementById('winPercentage').style.color = 'green';
-  } else {
-    document.getElementById('winPercentage').style.color = 'red';
-  }
-  document.getElementById('winPercentage').innerHTML = winPercentage + '%';
 }
 
 // calculate spread win percentage on change of any of the numbers
@@ -204,11 +182,24 @@ function calcOUWinPercentage() {
   document.getElementById('OUWinPercentage').innerHTML = OUWinPercentage + '%';
 }
 
+// calculate total win percentage on change of any of the numbers
+function calcTotalWinPercentage() {
+  let getTotalWins = Number(document.getElementById('totalWins').value);
+  let getTotalLosses = Number(document.getElementById('totalLosses').value);
+  let totalWagers = getTotalWins + getTotalLosses;
+  let winPercentage = ((getTotalWins / totalWagers) * 100).toFixed(2);
+
+  if (winPercentage >= 50) {
+    document.getElementById('winPercentage').style.color = 'green';
+  } else {
+    document.getElementById('winPercentage').style.color = 'red';
+  }
+  document.getElementById('winPercentage').innerHTML = winPercentage + '%';
+}
+
 // calculating total profit/loss based on unit amount
 function calcUnitWinLoss() {
-  let getTotalWins =
-    Number(document.getElementById('spreadWins').value) +
-    Number(document.getElementById('OUWins').value);
+  let getTotalWins = Number(document.getElementById('totalWins').value);
   let getTotalLosses = Number(document.getElementById('totalLosses').value);
   let unit = document.getElementById('unit').value;
 
