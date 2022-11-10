@@ -43,20 +43,20 @@
             <div class="row mt-1 justify-content-end">
               <div id="tobiNBA" class="col-3 text-center tobiNBALabel">TobiNBA</div>
               <!-- Add disabled to these after pushing #s from lower section -->
-              <input disabled id="totalWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0"
-                onchange="storeTotalWins()">
-              <input disabled id="totalLosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
-                onchange="storeTotalLosses()">
-              <input disabled id="totalPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
-                onchange="storeTotalPushes()">
-              <div id="winPercentage" class="winPercentage col-2 p-0" value="0"></div>
+              <input disabled id="tobinTotalWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0"
+                onchange="tobinStoreTotalWins()">
+              <input disabled id="tobinTotalLosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
+                onchange="tobinStoreTotalLosses()">
+              <input disabled id="tobinTotalPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
+                onchange="tobinStoreTotalPushes()">
+              <div id="tobinWinPercentage" class="tobinWinPercentage col-2 p-0" value="0"></div>
             </div>
             <div class="row mt-1 justify-content-end">
               <div class="col-2 text-center unitLabel">
-                Unit
+                Tobin Unit
               </div>
-              <input id="unit" class="col-2 me-1 p-0" type="number" onchange="storeUnit()">
-              <div id="unitSelect" class="unitSelect col-2 p-0" value="0"></div>
+              <input id="tobinUnit" class="col-2 me-1 p-0" type="number" onchange="tobinStoreUnit()">
+              <div id="tobinUnitSelect" class="tobinUnitSelect col-2 p-0" value="0"></div>
             </div>
           </span>
           <span class="statTracking">
@@ -75,30 +75,107 @@
               </div>
             </div>
             <div class="row mt-1 justify-content-end">
-              <div id="spread" class="col-3 text-center spreadLabel">Spread</div>
-              <input id="spreadWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0"
-                onchange="storeSpreadWins()">
-              <input id="spreadLosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
-                onchange="storeSpreadLosses()">
-              <input id="spreadPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
-                onchange="storeSpreadPushes()">
-              <div id="spreadWinPercentage" class="spreadWinPercentage col-2 p-0" value="0"></div>
+              <div id="spread" class="col-3 text-center spreadLabel">Tobin Spread</div>
+              <input id="tobinSpreadWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0"
+                onchange="tobinStoreSpreadWins()">
+              <input id="tobinSpreadLosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
+                onchange="tobinStoreSpreadLosses()">
+              <input id="tobinSpreadPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
+                onchange="tobinStoreSpreadPushes()">
+              <div id="tobinSpreadWinPercentage" class="tobinSpreadWinPercentage col-2 p-0" value="0"></div>
             </div>
             <div class="row mt-1 justify-content-end">
-              <div id="OU" class="col-3 text-center OULabel">O/U</div>
-              <input id="OUWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0" onchange="storeOUWins()">
-              <input id="OULosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
-                onchange="storeOULosses()">
-              <input id="OUPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
-                onchange="storeOUPushes()">
-              <div id="OUWinPercentage" class="winPercentage col-2 p-0" value="0"></div>
+              <div id="OU" class="col-3 text-center OULabel">Tobin O/U</div>
+              <input id="tobinOUWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0"
+                onchange="tobinStoreOUWins()">
+              <input id="tobinOULosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
+                onchange="tobinStoreOULosses()">
+              <input id="tobinOUPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
+                onchange="tobinStoreOUPushes()">
+              <div id="tobinOUWinPercentage" class="tobinWinPercentage col-2 p-0" value="0"></div>
             </div>
           </span>
         </div>
       </div>
 
-      <!-- Personal Script -->
-      <script src="scripts.js"></script>
+      <div class="card border-primary m-4 justify-content-center">
+        <div class="card-body">
+          <span class="overallTracking">
+            <div class="row justify-content-end text-center">
+              <div class="col-2 me-1 label">
+                Win
+              </div>
+              <div class="col-2 me-1 label">
+                Loss
+              </div>
+              <div class="col-2 me-1 label">
+                Push
+              </div>
+              <div class="col-2 me-1 label">
+                Total
+              </div>
+            </div>
+            <div class="row mt-1 justify-content-end">
+              <div id="weAreVegasLabel" class="col-3 text-center weAreVegasLabel">weAreVegas</div>
+              <!-- Add disabled to these after pushing #s from lower section -->
+              <input disabled id="weAreVegasTotalWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0"
+                onchange="weAreVegasStoreTotalWins()">
+              <input disabled id="weAreVegasTotalLosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
+                onchange="weAreVegasStoreTotalLosses()">
+              <input disabled id="weAreVegasTotalPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
+                onchange="weAreVegasStoreTotalPushes()">
+              <div id="weAreVegasWinPercentage" class="weAreVegasWinPercentage col-2 p-0" value="0"></div>
+            </div>
+            <div class="row mt-1 justify-content-end">
+              <div class="col-2 text-center unitLabel">
+                weAreVegas Unit
+              </div>
+              <input id="weAreVegasUnit" class="col-2 me-1 p-0" type="number" onchange="weAreVegasStoreUnit()">
+              <div id="weAreVegasUnitSelect" class="weAreVegasUnitSelect col-2 p-0" value="0"></div>
+            </div>
+          </span>
+          <span class="statTracking">
+            <div class="row mt-5 justify-content-end text-center">
+              <div class="col-2 me-1 label">
+                Win
+              </div>
+              <div class="col-2 me-1 label">
+                Loss
+              </div>
+              <div class="col-2 me-1 label">
+                Push
+              </div>
+              <div class="col-2 me-1 label">
+                W %
+              </div>
+            </div>
+            <div class="row mt-1 justify-content-end">
+              <div id="spread" class="col-3 text-center spreadLabel">weAreVegas Spread</div>
+              <input id="weAreVegasSpreadWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0"
+                onchange="weAreVegasStoreSpreadWins()">
+              <input id="weAreVegasSpreadLosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
+                onchange="weAreVegasStoreSpreadLosses()">
+              <input id="weAreVegasSpreadPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
+                onchange="weAreVegasStoreSpreadPushes()">
+              <div id="weAreVegasSpreadWinPercentage" class="weAreVegasSpreadWinPercentage col-2 p-0" value="0"></div>
+            </div>
+            <div class="row mt-1 justify-content-end">
+              <div id="OU" class="col-3 text-center OULabel">weAreVegas O/U</div>
+              <input id="weAreVegasOUWins" type="number" min="0" class="wins col-2 me-1 p-0" value="0"
+                onchange="weAreVegasStoreOUWins()">
+              <input id="weAreVegasOULosses" type="number" min="0" class="losses col-2 me-1 p-0" value="0"
+                onchange="weAreVegasStoreOULosses()">
+              <input id="weAreVegasOUPushes" type="number" min="0" class="pushes col-2 me-1 p-0" value="0"
+                onchange="weAreVegasStoreOUPushes()">
+              <div id="weAreVegasOUWinPercentage" class="weAreVegasWinPercentage col-2 p-0" value="0"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <!-- Personal Scripts -->
+      <script src="tobinScripts.js"></script>
+      <script src="weAreVegasScripts.js"></script>
 
       <!-- Bootstrap Bundle with Popper -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
