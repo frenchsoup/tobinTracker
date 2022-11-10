@@ -32,13 +32,3 @@ input[type='number']::-webkit-outer-spin-button {
 .label {
   font-weight: bold;
 }
-
-/* .tobinWinPercentage,
-.tobinSpreadWinPercentage,
-.tobinUnitSelect,
-.weAreVegasWinPercentage,
-.weAreVegasSpreadWinPercentage,
-.weAreVegasUnitSelect {
-  vertical-align: middle;
-  font-weight: bold;
-} */
